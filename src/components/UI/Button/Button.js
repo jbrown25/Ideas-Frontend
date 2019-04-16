@@ -1,17 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Color from 'color';
 import PropTypes from 'prop-types';
 
-const DEFAULT_COLOR = 'violet';
-
-const getColor = color => {
-	return color ? color : DEFAULT_COLOR;
-};
-
-const getDarkColor = color => {
-	return Color(color).darken(0.2).hex();
-};
+import {getColor, getDarkColor} from '../../../utils/colors';
 
 const ButtonElement = styled.button`
 	display: ${props => props.btnBlock ? 'block' : 'inline-block'};

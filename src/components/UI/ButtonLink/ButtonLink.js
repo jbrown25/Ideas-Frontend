@@ -2,17 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import Color from 'color';
 
-const DEFAULT_COLOR = 'violet';
-
-const getColor = color => {
-	return color ? color : DEFAULT_COLOR;
-};
-
-const getDarkColor = color => {
-	return Color(color).darken(0.2).hex();
-};
+import {getColor, getDarkColor} from '../../../utils/colors';
 
 const ButtonLinkElement = styled(Link)`
 	display: ${props => props.btnBlock ? 'block' : 'inline-block'};
